@@ -8,6 +8,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RepoComponent } from './repo/repo.component';
 import { GithubComponent } from './github/github.component';
+import { GFormComponent } from './g-form/g-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GithubComponent } from './github/github.component';
     LandingpageComponent,
     ProfileComponent,
     RepoComponent,
-    GithubComponent
+    GithubComponent,
+    GFormComponent
   ],
   imports: [
     BrowserModule,

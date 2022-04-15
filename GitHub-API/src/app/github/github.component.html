@@ -2,13 +2,22 @@
 <h1 class="text-center fw-bold">GitHub</h1>
 <hr>
 <div class="container">
-    <ul>
-        <div *ngFor='let git of github;let i = index'>
-            <span id="name">{{git.name}}</span> <br>
-            <span id="description">{{git.description}}</span>
-            <!-- <button (click)='toggleDetails(i)'>Toggle Details</button> -->
-            <!-- <app-goal-detail *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail> -->
+    <div class="row">
+        <div class="col-5">
+            <app-g-form></app-g-form>
         </div>
-    </ul>
-    <p *ngIf='github.length > 5'>You have too many Repositories</p>
+        <div class="col-5">
+            <h3 class="text-center">GitHub Accounts </h3>
+            <hr>
+            <ul>
+                <div *ngFor='let git of github;let i = index'>
+                    <span id="name">{{git.name}}</span> <br>
+                    <span id="description">{{git.description}}</span>
+                    <!-- <button (click)='toggleDetails(i)'>Toggle Details</button> -->
+                    <!-- <app-goal-detail *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail> -->
+                </div>
+            </ul>
+            <p *ngIf='github.length > 5'>You have too many Repositories</p>
+        </div>
+    </div>
 </div>
