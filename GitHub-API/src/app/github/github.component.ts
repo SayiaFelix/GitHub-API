@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Repositories } from '../repositories';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../user';
 
 @Component({
   selector: 'app-github',
@@ -8,6 +10,7 @@ import { Repositories } from '../repositories';
 })
 export class GithubComponent implements OnInit {
 
+user: User| undefined
 
   github:Repositories [] = [
     new Repositories(1, 'GOALS-ANGULARWORK', 'Find an online version and watch merlin find his son'),
@@ -18,12 +21,19 @@ export class GithubComponent implements OnInit {
   ];
 
 
-
-
-
-  constructor() {}
+  constructor( private http:HttpClient) {}
 
   ngOnInit(): void {
-  }
+    //   interface ApiResponse{
+    //   name:string;
+    //   description:string;
+    // }
 
+    // this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+    //   // Succesful API request
+    //   this.user = new User(data.name, data.description)
+    // })
+  }
 }
+
+

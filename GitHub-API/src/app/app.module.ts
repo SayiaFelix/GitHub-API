@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RepoComponent } from './repo/repo.component';
 import { GithubComponent } from './github/github.component';
 import { GFormComponent } from './g-form/g-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GFormComponent } from './g-form/g-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
