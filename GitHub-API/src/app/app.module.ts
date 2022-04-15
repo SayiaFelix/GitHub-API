@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RepoComponent } from './repo/repo.component';
+import { GithubComponent } from './github/github.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RepoComponent } from './repo/repo.component';
     NavBarComponent,
     LandingpageComponent,
     ProfileComponent,
-    RepoComponent
+    RepoComponent,
+    GithubComponent
   ],
   imports: [
     BrowserModule,
