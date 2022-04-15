@@ -1,0 +1,9 @@
+.navbar-nav {
+    margin-left: 35%;
+}
+
+.navbar-nav a {
+    font-size: 16px;
+    font-weight: bolder;
+    color: black;
+}

@@ -1,0 +1,16 @@
+.col-6 {
+    height: 170px;
+    width: 330px;
+    border: 1px solid black;
+    margin: 1%;
+    border-radius: 4px;
+}
+
+.bottom {
+    padding-top: 25%;
+    font-size: 10px;
+}
+
+.content {
+    padding-top: 2%;
+}
