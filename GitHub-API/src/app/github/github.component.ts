@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-import{GitHubRequestService} from '../GitHub-http/git-hub-request.service';
+// import{GitHubRequestService} from '../GitHub-http/git-hub-request.service';
+import { GitHubService } from '../git-hub.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import{GitHubRequestService} from '../GitHub-http/git-hub-request.service';
 })
 export class GithubComponent implements OnInit {
 
-  
+  // repositories:Repositories[]| undefined;
 
   github:Repositories [] = [
     new Repositories(1, 'GOALS-ANGULARWORK', 'Find an online version and watch merlin find his son'),
@@ -22,12 +23,10 @@ export class GithubComponent implements OnInit {
     new Repositories(5,'PIZZA TOS PIZZERIA','Damn Math'),
   ];
 
-  // profileInfo:any; User;
-  
- profileInfo: User | any ;
+ profileInfo: User | undefined;
 
   constructor() {
-
+    // this.repositories= new GitHubService.getRepositories()
   }
 
   ngOnInit(): void {
