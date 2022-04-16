@@ -1,15 +1,18 @@
 <h1 class="text-center fw-bold">GitHub</h1>
 <hr>
 <div class="container">
+    <div class="input">
+        <input type="text" placeholder="Search for Api">
+    </div>
+</div>
+
+<div class="container">
     <div class="row">
-        <div class="col-5">
-            <!-- <app-g-form></app-g-form> -->
-        </div>
-        <div class="col-5">
+        <div class="col-10">
             <h3 class="text-center">GitHub Accounts </h3>
             <hr>
             <ul>
-                <div *ngFor='let git of github;let i = index'>
+                <div class="text-center" *ngFor='let git of github;let i = index'>
                     <span id="name" appHighlight>{{git.login}}</span> <br>
                     <span> Done: <strong>{{git.date|dateCount}}</strong> ago.</span> <br>
                     <span id="description">{{git.url}}</span>
