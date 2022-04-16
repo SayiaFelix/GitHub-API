@@ -10,6 +10,7 @@ import { RepoComponent } from './repo/repo.component';
 import { GithubComponent } from './github/github.component';
 import { GFormComponent } from './g-form/g-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GitHubRequestService } from './GitHub-http/git-hub-request.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GitHubRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

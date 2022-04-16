@@ -1,4 +1,3 @@
-<!-- <p>github works!</p> -->
 <h1 class="text-center fw-bold">GitHub</h1>
 <hr>
 <div class="container">
@@ -11,13 +10,19 @@
             <hr>
             <ul>
                 <div *ngFor='let git of github;let i = index'>
-                    <span id="name">{{git.name}}</span> <br>
-                    <span id="description">{{git.description}}</span>
-                    <!-- <button (click)='toggleDetails(i)'>Toggle Details</button> -->
-                    <!-- <app-goal-detail *ngIf='goal.showDescription' [goal]='goal'></app-goal-detail> -->
+                    <span id="name">{{git.login}}</span> <br>
+                    <span id="description">{{git.url}}</span>
+
                 </div>
             </ul>
             <p *ngIf='github.length > 5'>You have too many Repositories</p>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">{{profileInfo.login}}</p>
+        <footer class="blockquote-footer"><cite>{{profileInfo.url}}</cite></footer>
+    </blockquote>
 </div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
+import{GitHubRequestService} from '../GitHub-http/git-hub-request.service';
+
 
 @Component({
   selector: 'app-github',
@@ -10,7 +12,7 @@ import { User } from '../user';
 })
 export class GithubComponent implements OnInit {
 
-user: User| undefined
+  
 
   github:Repositories [] = [
     new Repositories(1, 'GOALS-ANGULARWORK', 'Find an online version and watch merlin find his son'),
@@ -20,19 +22,16 @@ user: User| undefined
     new Repositories(5,'PIZZA TOS PIZZERIA','Damn Math'),
   ];
 
+  // profileInfo:any; User;
+  
+ profileInfo: User | any ;
 
-  constructor( private http:HttpClient) {}
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    //   interface ApiResponse{
-    //   name:string;
-    //   description:string;
-    // }
-
-    // this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
-    //   // Succesful API request
-    //   this.user = new User(data.name, data.description)
-    // })
+   
   }
 }
 

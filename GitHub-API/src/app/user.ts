@@ -1,3 +1,6 @@
 export class User {
-      constructor(public name:string, public description:string ){}
+constructor(public login:string, public url:string ){
+this.login=login
+this.url=url
+ }
 }
