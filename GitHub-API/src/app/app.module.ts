@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GitHubRequestService } from './GitHub-http/git-hub-request.service';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HighlightDirective } from './highlight.directive';
     GithubComponent,
     GFormComponent,
     DateCountPipe,
-    HighlightDirective
+    HighlightDirective,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
