@@ -11,6 +11,7 @@
             <ul>
                 <div *ngFor='let git of github;let i = index'>
                     <span id="name">{{git.login}}</span> <br>
+                    <span> Done: <strong>{{git.date|dateCount}}</strong> ago.</span> <br>
                     <span id="description">{{git.url}}</span>
 
                 </div>
