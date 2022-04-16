@@ -12,6 +12,7 @@ import { GFormComponent } from './g-form/g-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GitHubRequestService } from './GitHub-http/git-hub-request.service';
 import { DateCountPipe } from './date-count.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DateCountPipe } from './date-count.pipe';
     RepoComponent,
     GithubComponent,
     GFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
