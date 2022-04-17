@@ -10,12 +10,16 @@
     margin-top: 12%;
 }
 
+.profile-data img {
+    border-radius: 10px;
+}
+
 .profile-data:nth-child(1) {
     color: black;
 }
 
 #fullstack {
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .edit-profile {
