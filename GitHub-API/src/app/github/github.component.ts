@@ -22,14 +22,16 @@ export class GithubComponent implements OnInit {
   ];
 
  profileInfo: User | any;
-
+username:any;
   constructor(private gitHubRequest: GitHubRequestService) {
   }
 
   ngOnInit(): void {
    this.gitHubRequest.profileInfoRequest();
+  //  this.gitHubRequest.getUserData(this.username);
    this.profileInfo=this.gitHubRequest.profileInfo;
-  }
+  
 }
 
 
+}

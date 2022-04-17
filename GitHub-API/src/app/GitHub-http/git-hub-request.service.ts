@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { User } from '../user';
-
+// import { Repositories } from '../repositories';
 
 @Injectable({
   providedIn: 'root'
@@ -17,24 +17,13 @@ export class GitHubRequestService {
 
   constructor(private http:HttpClient) {
      this.profileInfo = new User("","");
-
      this.username='SayiaFelix'
   }
 
-// getProfileInfo(){
 
-   
-//     return this.http
-//       .get('https://api.github.com/users/' + this.username + '?access_token=' + environment.gitHubApi).map((res: any) => res); 
-// }
-// getrepoInfo() {
-//   return this.http
-//     .get('https://api.github.com/users/' + this.username + '/repos' +'?access_token=' + environment.gitHubApi ).map((res: any) => res);
-// }
-
-// updateProfile(username: string) {
-//   this.username = username;
-// }
+updateProfile(username: string) {
+  this.username = username;
+}
  profileInfoRequest(){
      interface ApiResponse{
        login:string;
@@ -54,5 +43,6 @@ export class GitHubRequestService {
      })
      return promise
    }
+
 
 }
