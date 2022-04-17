@@ -16,11 +16,11 @@ export class GithubComponent implements OnInit {
   // repositories:Repositories[]| undefined;
 
   github:Repositories [] = [
-    new Repositories(1, 'GOALS-ANGULARWORK', 'Find an online version and watch merlin find his son',new Date(2021,3,14)),
-    new Repositories(2,'DELANI-STUDIO','I have to buy cookies for the parrot',new Date(2021,3,14)),
-    new Repositories(3,'AKAN-NAMES','Diana has her birthday coming up soon',new Date(2021,4,14)),
-    new Repositories(4,'MY-PORTFOLIO','Pupper likes expensive snacks',new Date(2021,5,14)),
-    new Repositories(5,'PIZZA TOS PIZZERIA','Damn Math',new Date(2021,7,14)),
+    new Repositories(1, 'GOALS-ANGULARWORK', 'Goal-Angular work is an angular app where i have used angular components to make the application.',new Date(2021,3,14)),
+    new Repositories(2,'DELANI-STUDIO','Delani Studio is an app where a user can view our services and get to experience our jQUERY and Javascript skills.',new Date(2021,3,14)),
+    new Repositories(3,'AKAN-NAMES','Akan Names is an app where i have incooperated Ghanian Culture Name where a user can input his/her name then receive a Ghanian Culture Name.',new Date(2021,4,14)),
+    new Repositories(4,'MY-PORTFOLIO','My Portfolio is an app where i have showcase my skills,level of education and also my rates for services as a Data scientist and a Software Engineer.',new Date(2021,5,14)),
+    new Repositories(5,'Pizza TOS PIZZERIA','Pizza TOSS PIZZERIA is an app where i have designed a web app and a user can place his/her order for pizza and it willl be delivered.',new Date(2021,7,14)),
   ];
 
  profileInfo: User | undefined;

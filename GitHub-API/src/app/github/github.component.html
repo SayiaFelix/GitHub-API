@@ -8,18 +8,18 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-10">
+        <div class="col-12">
             <h3 class="text-center">GitHub Accounts </h3>
             <hr>
             <ul>
-                <div class="text-center" *ngFor='let git of github;let i = index'>
+                <div class="text-center" *ngFor='let git of github'>
                     <span id="name" appHighlight>{{git.login}}</span> <br>
-                    <span> Done: <strong>{{git.date|dateCount}}</strong> ago.</span> <br>
+                    <span> Updated <strong>{{git.date|dateCount}}</strong> ago.</span> <br>
                     <span id="description">{{git.url}}</span>
-
+                    <hr>
                 </div>
             </ul>
-            <p *ngIf='github.length > 5'>You have too many Repositories</p>
+            <p *ngIf=' github.length> 5'>You have too many Repositories</p>
         </div>
     </div>
 </div>
