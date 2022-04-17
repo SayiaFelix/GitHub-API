@@ -41,16 +41,14 @@ export class GitHubRequestService {
        url:string;
      }
      let promise = new Promise((resolve,reject)=>{
-       this.http.get<ApiResponse>('https://api.github.com/users/' + environment.gitHubApi).toPromise().then( response=>{
-         this.profileInfo.login = response?.login
-         this.profileInfo.url = response?.url
-
+       this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + '?access_token=' + environment.gitHubApi).toPromise().then( (response:any)=>{
+         this.profileInfo.login = response.login
+         this.profileInfo.url = response.url
          resolve(response)
        },
        error=>{
          this.profileInfo.login = "Sir Felix"
-         this.profileInfo.url = "Its Not Found"
-
+         this.profileInfo.url = "Page is not found check your url"
          reject(error)
        })
      })

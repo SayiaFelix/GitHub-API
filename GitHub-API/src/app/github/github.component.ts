@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-
-import { GitHubService } from '../git-hub.service';
 import { GitHubRequestService } from '../GitHub-http/git-hub-request.service';
 
 
@@ -14,7 +12,6 @@ import { GitHubRequestService } from '../GitHub-http/git-hub-request.service';
 })
 export class GithubComponent implements OnInit {
 
-  // repositories:Repositories[]| undefined;
 
   github:Repositories [] = [
     new Repositories(1, 'GOALS-ANGULARWORK', 'Goal-Angular work is an angular app where i have used angular components to make the application.',new Date(2021,3,14)),
@@ -27,8 +24,6 @@ export class GithubComponent implements OnInit {
  profileInfo: User | any;
 
   constructor(private gitHubRequest: GitHubRequestService) {
-
-    // this.repositories= new GitHubService.getRepositories()
   }
 
   ngOnInit(): void {
