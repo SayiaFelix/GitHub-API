@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Repositories } from '../repositories';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-// import{GitHubRequestService} from '../GitHub-http/git-hub-request.service';
+
 import { GitHubService } from '../git-hub.service';
+import { GitHubRequestService } from '../GitHub-http/git-hub-request.service';
 
 
 @Component({
@@ -23,14 +24,16 @@ export class GithubComponent implements OnInit {
     new Repositories(5,'Pizza TOS PIZZERIA','Pizza TOSS PIZZERIA is an app where i have designed a web app and a user can place his/her order for pizza and it willl be delivered.',new Date(2021,7,14)),
   ];
 
- profileInfo: User | undefined;
+ profileInfo: User | any;
 
-  constructor() {
+  constructor(private gitHubRequest: GitHubRequestService) {
+
     // this.repositories= new GitHubService.getRepositories()
   }
 
   ngOnInit(): void {
-   
+   this.gitHubRequest.profileInfoRequest();
+   this.profileInfo=this.gitHubRequest.profileInfo;
   }
 }
 

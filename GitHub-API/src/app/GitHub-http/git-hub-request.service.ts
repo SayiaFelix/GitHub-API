@@ -11,14 +11,13 @@ export class GitHubRequestService {
  
   profileInfo:any; User: any;
 
-
   private username: string;
   private gitHubApi: string = 'environment.gitHubApi';
   private gitUrl: string = 'https://api.github.com/users/';
 
-
   constructor(private http:HttpClient) {
      this.profileInfo = new User("","");
+
      this.username='SayiaFelix'
   }
 
@@ -36,13 +35,13 @@ export class GitHubRequestService {
 // updateProfile(username: string) {
 //   this.username = username;
 // }
-   quoteRequest(){
+ profileInfoRequest(){
      interface ApiResponse{
        login:string;
        url:string;
      }
      let promise = new Promise((resolve,reject)=>{
-       this.http.get<ApiResponse>('https://api.github.com/users/'+ environment.gitHubApi).toPromise().then( response=>{
+       this.http.get<ApiResponse>('https://api.github.com/users/' + environment.gitHubApi).toPromise().then( response=>{
          this.profileInfo.login = response?.login
          this.profileInfo.url = response?.url
 
@@ -57,6 +56,5 @@ export class GitHubRequestService {
      })
      return promise
    }
-
 
 }

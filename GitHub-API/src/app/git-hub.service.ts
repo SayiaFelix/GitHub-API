@@ -6,7 +6,6 @@ import { Repositories } from './repositories';
 })
 export class GitHubService {
   static getRepositories: any;
- 
   getRepositories(){
     return Repositories;
   }
