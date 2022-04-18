@@ -30,7 +30,18 @@ updateProfile(username: string) {
        url:string;
      }
      let promise = new Promise((resolve,reject)=>{
-       this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + '?access_token=' + environment.gitHubApi).toPromise().then( (response:any)=>{
+       this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + '?access_token=').toPromise().then( (response:any)=>{
+         this.profileInfo.login = response.login
+         this.profileInfo.url = response.url
+         resolve(response)
+       },
+       error=>{
+         this.profileInfo.login = "Sir Felix"
+         this.profileInfo.url = "Page is not found check your url"
+         reject(error)
+       })
+
+       this.http.get<ApiResponse>('https://api.github.com/repositories/' + this.username + '?access_token=').toPromise().then( (response:any)=>{
          this.profileInfo.login = response.login
          this.profileInfo.url = response.url
          resolve(response)
