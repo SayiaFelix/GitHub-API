@@ -1,14 +1,14 @@
-# Quotes
+# GitHub API
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-#### {9th April 2022}
+#### {19th April 2022}
 #### By **{Sayia Felix Lucas}**
 ## Description
 {This is an Angular App where a user can search for Github users on the site and view is repositories}
 
 ### User Stories
 1.User is able to view the profile.
-
+2.User is able to Search for GitHub API
 
 ## Setup/Installation Requirements
 * Open your terminal (CTRL ALT T)
@@ -33,7 +33,7 @@ https://github.com/SayiaFelix/GitHub-API.git
 
 ### Live site
 Available Here;
-
+https://sayiafelix.github.io/GitHub-API/
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
